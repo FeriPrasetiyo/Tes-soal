@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        dasboard
+    </title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datatables</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap5.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap5.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-dark fixed-top" style="background-color: #00BFFF;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Marketplace Sinau</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+    <div class="container-fluid" style="padding-top: 4rem;">
+        <div class="row justify-content-center">
+            <div class="col-4">
+                <div class="card">
+                    <div class="card-header">
+                        Tambah Barang
+                    </div>
+                    <div class="card-body">
+                        <form action="" method="post">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="row g-3 align-items-center">
+                                        <div class="col-3">
+                                            <label for="namaBarang" class="col-form-label">Nama barang</label>
+                                        </div>
+                                        <div class="col-auto">
+                                            <input type="text" id="namaBarang" name="namaBarang" class="form-control"
+                                                aria-describedby="passwordHelpInline">
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="row g-3 align-items-center">
+                                        <div class="col-3">
+                                            <label for="harga" class="col-form-label">Harga Barang</label>
+                                        </div>
+                                        <div class="col-auto">
+                                            <input type="number" id="harga" name="harga" class="form-control"
+                                                aria-describedby="passwordHelpInline">
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="row g-3 align-items-center">
+                                        <div class="col-3">
+                                            <label for="stokBarang" class="col-form-label">Stok Barang</label>
+                                        </div>
+                                        <div class="col-auto">
+                                            <input type="number" id="stokBarang" name="stokBarang" class="form-control"
+                                                aria-describedby="passwordHelpInline">
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="row g-3 align-items-center">
+                                        <div class="col-3">
+                                            <label for="supplier" class="col-form-label">Supplier Barang</label>
+                                        </div>
+                                        <div class="col-auto">
+                                            <input type="text" id="supplier" name="supplier" class="form-control"
+                                                aria-describedby="passwordHelpInline">
+                                        </div>
+                                        <hr>
+                                        <div class="d-flex justify-content-between">
+                                            <div class="col-auto">
+                                                <a href="/">
+                                                    <button type="button" class="btn btn-secondary">Kembali</button>
+                                                </a>
+                                            </div>
+                                            <div class="col-auto">
+                                                <button type="submit" class="btn btn-primary">Submit</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

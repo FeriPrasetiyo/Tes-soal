@@ -56,16 +56,66 @@
                     <div class="card-header">
                         dashboard
                     </div>
-                    <h6>barang</h6>
-                    <div class="col">
-                        <table id="example" class="display" style="width:100%">
-                            <thead>
-                                <tr>
-                                    <th>ID</th>
-                                    <th>Username</th>
-                                </tr>
-                            </thead>
-                        </table>
+                    <br>
+                    <div class="d-flex justify-content-between">
+                        <div class="col" style="padding-left: 20px;">
+                            <h6>Barang</h6>
+                        </div>
+                        <div class="col" style="padding-left: 25cm;">
+                            <a href="/create/barang" style="text-decoration: none;">
+                                <button type="button" class="btn btn-primary">Tambahkan barang</button>
+                            </a>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col">
+                            <table id="example" class="table table-striped" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th>No</th>
+                                        <th>Nama barang</th>
+                                        <th>Stok</th>
+                                        <th>Harga</th>
+                                        <th>Nama Supplier</th>
+                                        <th>No.Telp Supplier</th>
+                                        <th>Aksi</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <% newData.forEach((item, index)=> { %>
+                                        <tr>
+                                            <td>
+                                                <%= index+1 %>
+                                            </td>
+                                            <td>
+                                                <%= item.namaBarang %>
+                                            </td>
+                                            <td>
+                                                <%= item.stok %>
+                                            </td>
+                                            <td>
+                                                <%= item.harga %>
+                                            </td>
+                                            <td>
+                                                <%= item.newsupplier.namaSupplier %>
+                                            </td>
+                                            <td>
+                                                <%= item.newsupplier.noTelp %>
+                                            </td>
+                                            <td>
+                                                <a href="/edit/<%= item.id %>" style="text-decoration: none;">
+                                                    <button type="button" class="btn btn-success">Edit</button>
+                                                </a>
+                                                <a href="/delete/<%= item.id %>" style="text-decoration: none;">
+                                                    <button type="button" class="btn btn-danger">Delete</button>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        <% }) %>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -73,17 +123,10 @@
     </div>
 
     <script>
-        console.log(data)
+        let getToken = '<%= token %>'
         $(document).ready(function () {
             $('#example').DataTable({
-                "lengthMenu": [[1, 5, -1], [1, 5, "All"]],
-                "processing": true,
-                "serverSide": true,
-                "ajax": "/datatable",
-                "columns": [
-                    { "data": "id" },
-                    { "data": "username" }
-                ]
+                "lengthMenu": [[10, 20, -1], [10, 20, "All"]],
             });
         });
     </script>
